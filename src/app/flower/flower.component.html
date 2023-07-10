@@ -1,0 +1,84 @@
+<!--<h1>Types of Flowers</h1>
+<div *ngFor="let object of list" class="row">
+  <img [src]="object.picture" alt="" width="50%" />
+</div>-->
+<style>
+  div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+  }
+
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  .flex-container {
+    display: flex;
+  }
+
+  .flex-container > div {
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 20px;
+  }
+  .hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("https://images.unsplash.com/photo-1606041008023-472dfb5e530f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=776&q=80");
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+  #bannerimage {
+    width: 100%;
+    background-image: url(https://images.unsplash.com/photo-1490750967868-88aa4486c946?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80);
+    height: 405px;
+    background-color: purple;
+    background-position: center;
+  }
+  .banner-text {
+    margin-left: 40px;
+    padding-top: 30px;
+    color: white;
+  }
+  .banner-text button:hover {
+    background-color: #555;
+    color: white;
+  }
+</style>
+
+<body>
+  <div id="bannerimage">
+    <div class="banner-text">
+      <h1 style="font-size: 50px">Interflora</h1>
+      <p>Flowers that are fresh can uplift a gloomy day</p>
+      <button class="primary">Buy now</button>
+    </div>
+  </div>
+  <div class="flex-container">
+    <div class="row">
+      <div *ngFor="let object of list" class="gallery">
+        <img [src]="object.picture" alt="" width="600" height="400" />
+        <div class="desc">Add a description of the image here</div>
+      </div>
+    </div>
+  </div>
+</body>
