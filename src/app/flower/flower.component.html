@@ -11,7 +11,7 @@
   }
 
   div.gallery:hover {
-    border: 1px solid #777;
+    color: #f1c40f;
   }
 
   div.gallery img {
@@ -36,15 +36,9 @@
     background-color: #f1f1f1;
     margin: 10px;
     padding: 20px;
-  }
-  .hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("https://images.unsplash.com/photo-1606041008023-472dfb5e530f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=776&q=80");
-    height: 50%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+    justify-items: center;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   }
 
   #bannerimage {
@@ -63,6 +57,20 @@
     background-color: #555;
     color: white;
   }
+  .primary {
+    background-color: #f1c40f;
+    border: none;
+    color: rgb(16, 14, 14);
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    padding: 5px;
+    min-height: 30px;
+    min-width: 120px;
+    border-radius: 8px;
+  }
 </style>
 
 <body>
@@ -75,8 +83,13 @@
   </div>
   <div class="flex-container">
     <div class="row">
-      <div *ngFor="let object of list" class="gallery">
-        <img [src]="object.picture" alt="" width="600" height="400" />
+      <h2 style="font-size: 24px">Suggested flowers</h2>
+      <div
+        *ngFor="let object of list"
+        class="gallery"
+        routerLink="/flower/{{ object.id }}"
+      >
+        <img [src]="object.picture" alt="" />
         <div class="desc">Add a description of the image here</div>
       </div>
     </div>
