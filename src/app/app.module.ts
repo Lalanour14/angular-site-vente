@@ -9,7 +9,12 @@ import { ShopComponent } from './shop/shop.component';
 import { SingleFlowerComponent } from './single-flower/single-flower.component';
 
 @NgModule({
-  declarations: [AppComponent, FlowerComponent, ShopComponent, SingleFlowerComponent],
+  declarations: [
+    AppComponent,
+    FlowerComponent,
+    ShopComponent,
+    SingleFlowerComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

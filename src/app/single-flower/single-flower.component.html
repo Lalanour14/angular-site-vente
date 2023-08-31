@@ -1,7 +1,7 @@
 <div *ngIf="fleur">
   <div class="flex-box">
     <h1>{{ fleur.description }}</h1>
-    <p>The price to display{{ fleur.label }}</p>
-    <p>The variety: <img [src]="fleur.picture" alt="" /></p>
+    <p>{{ fleur.label }}</p>
+    <p><img [src]="fleur.picture" alt="" width="60%" /></p>
   </div>
 </div>
